@@ -13,6 +13,6 @@ Let's take an initial look at the math. With 16 players, there are 16 choose 2 p
 
 How many ways can we select 8 couples from a pool of 16 people? Choosing the first pair is {% raw %}$${16\choose 2}$${% endraw %}, the second {% raw %}$${14\choose 2}$${% endraw %}, and so on. These pairs can be arranged in 8! ways. So there are
 {% raw %}
-  $$\dfrac{{16\choose 2}{14\choose 2}{12\choose 2} ... {2\choose 2}}{8!} = \dfrac{16!}{8!2^8} = 2,027,025$$
+  $$\dfrac{{16\choose 2}{14\choose 2}{12\choose 2} ... {2\choose 2}}{8!} = \dfrac{16!}{8!\times2^8} = 2,027,025$$
 {% endraw %}
 ways to select 8 couples.
