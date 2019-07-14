@@ -20,6 +20,6 @@ ways to select 8 couples. To make communicating easier, I will be calling each s
 ## The Truth Booth
 The results from the Truth Booth are extremely valuable in minimizing the space of potential solutions. Each perfect match revealed in the Truth Booth eliminates
 {% raw %}
-  $$\dfrac{(16 - 2p)!}{(8-p)!\times2^(8-p)}$$
+  $$\dfrac{(16 - 2p)!}{(8-p)!\times2^{8-p}}$$
 {% endraw %}
 possible solutions, where p is the nth perfect match revealed.
