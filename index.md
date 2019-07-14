@@ -18,7 +18,7 @@ How many ways can we select 8 couples from a pool of 16 people? Choosing the fir
 ways to select 8 couples. To make communicating easier, I will be calling each set of 8 couples a solution. The purpose of this project is to select and apply a mathematical model to this problem in order minimize the set of possible solutions.
 
 ## The Truth Booth
-The results from the Truth Booth are extremely valuable in minimizing the space of potential solutions. Each perfect match revealed in the Truth Booth eliminates
+The results from the Truth Booth are extremely valuable in minimizing the space of potential solutions. Each perfect match revealed in the Truth Booth leaves
 {% raw %}
   $$\dfrac{(16 - 2p)!}{(8-p)!\times2^{(8-p)}}$$
 {% endraw %}
@@ -33,3 +33,17 @@ possible solutions, where p is the nth perfect match revealed. The following cha
 | 5th                    | 15                          |
 | 6th                    | 3                           |
 | 7th                    | 1                           |
+
+Conversely, revealing a non-match in the Truth Booth is much less effective at minimizing the solution space, as it only eliminates other solutions that also contain that particular match, which is a near-constant rate.
+
+| Non-Match Revealed | Maximum Solutions Remaining |
+|--------------------|-----------------------------|
+| 1st                | 1,891,890                   |
+| 2nd                | 1,756,754                   |
+| 3rd                | 1,621,617                   |
+| 4th                | 1,486,478                   |
+| 5th                | 1,351,348                   |
+| 6th                | 1,215,197                   |
+| 7th                | 1,081,060                   |
+
+These numbers demonstrate that the mathematically optimal strategy for the Truth Booth is to send couples which are believed to be perfect matches, as opposed to sending in a couple with a rocky relationship in the hopes of breaking them up.
