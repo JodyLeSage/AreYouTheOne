@@ -16,3 +16,10 @@ How many ways can we select 8 couples from a pool of 16 people? Choosing the fir
   $$\dfrac{{16\choose 2}{14\choose 2}{12\choose 2} ... {2\choose 2}}{8!} = \dfrac{16!}{8!\times2^8} = 2,027,025$$
 {% endraw %}
 ways to select 8 couples. To make communicating easier, I will be calling each set of 8 couples a solution. The purpose of this project is to select and apply a mathematical model to this problem in order minimize the set of possible solutions.
+
+## The Truth Booth
+The results from the Truth Booth are extremely valuable in minimizing the space of potential solutions. Each perfect match revealed in the Truth Booth eliminates
+{% raw %}
+  $$\dfrac{(16 - 2p)!}{(8-p)!\times2^(8-p)}$$
+{% endraw %}
+possible solutions, where p is the nth perfect match revealed.
