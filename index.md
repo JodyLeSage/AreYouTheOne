@@ -22,4 +22,14 @@ The results from the Truth Booth are extremely valuable in minimizing the space 
 {% raw %}
   $$\dfrac{(16 - 2p)!}{(8-p)!\times2^{(8-p)}}$$
 {% endraw %}
-possible solutions, where p is the nth perfect match revealed.
+possible solutions, where p is the nth perfect match revealed. The following chart shows the effect on the solution space that each perfect match has.
+
+| Perfect Match Revealed | Solutions Remaining |
+|------------------------|---------------------|
+| 1st                    | 135,135             |
+| 2nd                    | 10,395              |
+| 3rd                    | 945                 |
+| 4th                    | 210                 |
+| 5th                    | 15                  |
+| 6th                    | 3                   |
+| 7th                    | 1                   |
