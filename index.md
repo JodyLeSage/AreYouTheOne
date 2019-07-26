@@ -15,7 +15,10 @@ How many ways can we select 8 couples from a pool of 16 people? Choosing the fir
 {% raw %}
   $$\dfrac{{16\choose 2}{14\choose 2}{12\choose 2} ... {2\choose 2}}{8!} = \dfrac{16!}{8!\times2^8} = 2,027,025$$
 {% endraw %}
-ways to select 8 couples. To make communicating easier, I will be calling each set of 8 couples a solution. The purpose of this project is to select and apply a mathematical model to this problem in order minimize the set of possible solutions.
+ways to select 8 couples. To make communicating easier, I will be calling each set of 8 couples a solution. The purpose of this project is twofold:
+
+1. Select and apply a mathematical model to this problem in order minimize the set of possible solutions.
+2. Attempt to approximate the correct solution using probabalistic models.
 
 ## The Truth Booth
 The results from the Truth Booth are extremely valuable in minimizing the space of potential solutions. Each perfect match revealed in the Truth Booth leaves
@@ -47,3 +50,15 @@ Conversely, revealing a non-match in the Truth Booth is much less effective at m
 | 7th                | 1,081,060                   |
 
 These numbers demonstrate that the mathematically optimal strategy for the Truth Booth is to send couples which are believed to be perfect matches, as opposed to sending in a couple with a rocky relationship in the hopes of breaking them up.
+
+## The Probabalistic Model
+
+### The Base Model
+
+When making predictions, it is often useful to have a model that can estimate the probability that your prediction is correct. Let's see what a probabalistic model would look like if the show had only one matching ceremony with zero visits to the truth booth.
+
+In a matching ceremony, 8 couples are formed out of the 120 possible couples. It is then revealed that {% raw %}$$\dfrac{x}{8}$${% endraw %} couples are perfect matches.
+
+This means that the 8 couples from the matching ceremony collectively have a {% raw %}$$\dfrac{x}{8}$${% endraw %} probability of being perfect matches *and* that the remaining 112 possible couples collectively have a {% raw %}$$\dfrac{8-x}{8}$${% endraw %} chance of being perfect matches.
+
+In the real-world first matching ceremony, x=2. Therefore, we can assign a probability of {% raw %}$$\dfrac{\dfrac{2}{8}}{8} = 3.125%$${% endraw %} to each couple in the solution and {% raw %}$$\dfrac{\dfrac{6}{8}}{112} = 0.670%$${% endraw %} to the other possible matches
