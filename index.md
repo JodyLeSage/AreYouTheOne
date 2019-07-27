@@ -62,3 +62,11 @@ In a matching ceremony, 8 couples are formed out of the 120 possible couples. It
 This means that the 8 couples from the matching ceremony collectively have a {% raw %}$$\dfrac{x}{8}$${% endraw %} probability of being perfect matches *and* that the remaining 112 possible couples collectively have a {% raw %}$$\dfrac{8-x}{8}$${% endraw %} chance of being perfect matches.
 
 In the real-world first matching ceremony, x=2. Therefore, we can assign a probability of {% raw %}$$\dfrac{\dfrac{2}{8}}{8} = 3.125\%$${% endraw %} to each couple in the solution and {% raw %}$$\dfrac{\dfrac{6}{8}}{112} = 0.670\%$${% endraw %} to the other 112 possible matches.
+
+### Incorporating The Truth Booth
+
+Results from the truth booth can be used to refine this model. If a non-match is revealed, we can set the probability for that couple to zero and exclude it from the probability calculations. Conversely, a perfect match should receive the maximum probability, {% raw %}$$\dfrac{1}{8} = 12.5\%$${% endraw %}. Perfect matches also affect probability calculations:
+{% raw %}
+	{% raw %}$$\dfrac{\dfrac{x - p}{8 - p}}{8 - p} = \dfrac{x - p}{{(8 - p)^2}$${% endraw %}
+{% endraw %}
+Where x is the number of perfect matches revealed in a matching ceremony and p is the number of known perfect matches from the truth booth.
