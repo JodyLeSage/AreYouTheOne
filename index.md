@@ -67,6 +67,6 @@ In the real-world first matching ceremony, x=2. Therefore, we can assign a proba
 
 Results from the truth booth can be used to refine this model. If a non-match is revealed, we can set the probability for that couple to zero and exclude it from the probability calculations. Conversely, a perfect match should receive the maximum probability, {% raw %}$$\dfrac{1}{8} = 12.5\%$${% endraw %}. Perfect matches also affect probability calculations:
 
-{% raw %}$$\dfrac{(\dfrac{x - p}{8 - p})}{8 - p} = \dfrac{x - p}{(8 - p)^2}$${% endraw %}
+{% raw %}$$\dfrac{\Big(\dfrac{x - p}{8 - p}\Big)}{8 - p} = \dfrac{x - p}{(8 - p)^2}$${% endraw %}
 
 Where x is the number of perfect matches revealed in a matching ceremony and p is the number of known perfect matches from the truth booth.
